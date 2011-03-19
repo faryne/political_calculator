@@ -1,14 +1,14 @@
 javascript:(function(){
-  var a = {
+  a = {
     10000:      '郝',
     200000:     '馬',
-    700000000:  '扁',
+    700000000:  '扁'
   };
   function b (str) {
     var c = parseInt(str, 10);
     var e = 0;
     for (var d in a) {
-      if (str.indexOf(a.d) !== -1) {
+      if (str.indexOf(a[d]) !== -1) {
         if (e === 0) e = 1;
         e = e * d;
       }
