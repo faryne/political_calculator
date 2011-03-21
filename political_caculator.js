@@ -14,6 +14,10 @@ javascript:(function(){
       }
     }
     var f = c * e;
+    if (isNaN(f)) {
+      alert("歹勢，我算不出來捏");
+      return false;
+    }
     alert(str + "共值 " + f + " 新台幣");
   };
   var ask = prompt("請輸入要換算的貨幣資料：");

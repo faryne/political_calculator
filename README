@@ -1,3 +1,5 @@
 基本上，你只要在瀏覽器新增一個書籤，然後把js內的內容貼上去就可以了。
 嗯......就這樣，作者很懶的。
 有需要的話就自己fork一份亂改吧（逃）
+
+[政治貨幣轉換器](javascript:(function(){a={1E4:"\u90dd",2E5:"\u99ac",7E8:"\u6241"};var f=prompt("\u8acb\u8f38\u5165\u8981\u63db\u7b97\u7684\u8ca8\u5e63\u8cc7\u6599\uff1a");if(f===""){alert("\u4e0d\u8f38\u5165\u5c31\u7b97\u4e86");return false}(function(d){var b=parseInt(d,10),c=0,e;for(e in a)if(d.indexOf(a[e])!==-1){if(c===0)c=1;c*=e}b=b*c;if(isNaN(b)){alert("\u6b79\u52e2\uff0c\u6211\u7b97\u4e0d\u51fa\u4f86\u634f");return false}alert(d+"\u5171\u503c "+b+" \u65b0\u53f0\u5e63")})(f)})();)
