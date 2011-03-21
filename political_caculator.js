@@ -1,8 +1,8 @@
 javascript:(function(){
   a = {
-    10000:      '郝',
-    200000:     '馬',
-    700000000:  '扁'
+    10000:      "郝",
+    200000:     "馬",
+    700000000:  "扁"
   };
   function b (str) {
     var c = parseInt(str, 10);
@@ -18,10 +18,10 @@ javascript:(function(){
       alert("歹勢，我算不出來捏");
       return false;
     }
-    alert(str + "共值 " + f + " 新台幣");
+    alert(str + " 共值 " + f + " 新台幣");
   };
   var ask = prompt("請輸入要換算的貨幣資料：");
-  if (ask === '') {
+  if (ask === "") {
     alert("不輸入就算了");
     return false;
   }
