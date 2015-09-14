@@ -75,5 +75,6 @@ $.fn.p_converter = function (opts)
 
 		var result 			=	"(約為 "+ converter(original_number, from_rate.rate, to_rate.rate) + " " + to_rate.name + ")";
 		$(this).append($(wrapper).append(result));
+		return this;
 	});
 }
