@@ -1,13 +1,13 @@
 $.fn.p_converter = function (opts)
 {
 	var currencies = {
-		0.12:		"新台幣",
+		1:			"新台幣",
 		10000:      "郝",
 		200000:     "馬",
 		700000000:  "扁"
 	};
 
-	var wrapper 			=	'<span class="policy_currency"></span>',		// 要包起來的 ＨＴＭＬ 元素
+	var wrapper				=	'<span class="policy_currency"></span>',		// 要包起來的 ＨＴＭＬ 元素
 		pos					=	7, 												// 小數點位數
 		others				=	{};												// 其他要使用的貨幣單位
 
@@ -29,7 +29,7 @@ $.fn.p_converter = function (opts)
 
 	currencies				=	$.extend({}, currencies, others);
 
-	var converter 			=	function (num, from_rate, to_rate)
+	var converter			=	function (num, from_rate, to_rate)
 	{
 		var rate			=	from_rate / to_rate;
 		return round(num * rate, pos);
@@ -39,7 +39,7 @@ $.fn.p_converter = function (opts)
 	{
 		var size			=	Math.pow(10, pos);
 		return Math.round(num * size) / size;
-	}
+	};
 
 	$(this).each(function(){
 		var original 		=	$(this).html(),
@@ -75,5 +75,5 @@ $.fn.p_converter = function (opts)
 
 		var result 			=	"(約為 "+ converter(original_number, from_rate.rate, to_rate.rate) + " " + to_rate.name + ")";
 		$(this).append($(wrapper).append(result));
-	})
+	});
 }
